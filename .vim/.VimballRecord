@@ -1,0 +1,2 @@
+netrw.vba: call delete('/root/.vim/plugin/netrwPlugin.vim')|call delete('/root/.vim/autoload/netrw.vim')|call delete('/root/.vim/autoload/netrwFileHandlers.vim')|call delete('/root/.vim/autoload/netrwSettings.vim')|call delete('/root/.vim/doc/pi_netrw.txt')|call delete('/root/.vim/syntax/netrw.vim')
+conque_1.1.vba: call delete('/root/.vim/autoload/conque_term.vim')|call delete('/root/.vim/doc/conque_term.txt')|call delete('/root/.vim/plugin/conque_term.vim')|call delete('/root/.vim/syntax/conque_term.vim')
