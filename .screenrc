@@ -5,12 +5,13 @@ startup_message off
 escape ^Zz
 #
 # # 屏幕缓冲区 1024 行。
-defscrollback 1024
+defscrollback 10240
 #
 # # 在最下一行显示窗口列表和时钟
 hardstatus on
-hardstatus alwayslastline
+hardstatus lastline
 hardstatus string "%{.bW}%-w%{.rY} %t%{-}%+w %=%Y/%m/%d %c:%s "
+
 #
 # # 关闭错误提示
 vbell off

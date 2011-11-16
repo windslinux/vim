@@ -146,8 +146,8 @@ nmap <leader>9 9gt
 
 nmap <leader>tn :tabnew<CR>
 nmap <leader>d :bd<CR>
-nmap <C-p> :bp<CR>
-nmap <C-n> :bn<CR>
+nmap <leader>p :bp<CR>
+nmap <leader>n :bn<CR>
 
 "配色方案
 colo desert                         "ColorScheme(colo)
@@ -269,7 +269,7 @@ let Tlist_Use_Right_Window = 1          "在右侧窗口中显示taglist窗口
 map <silent> <F4> :NERDTreeToggle<cr>
 let g:NERDTreeHighlightCursorline = 0
 
-let g:winManagerWindowLayout = "TagList|FileExplorer"
+let g:winManagerWindowLayout = "TagList"
 let g:winManagerWidth = 30
 
 nmap <silent> <F5> :WMToggle<cr>
