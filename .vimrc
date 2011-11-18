@@ -144,7 +144,6 @@ nmap <leader>7 7gt
 nmap <leader>8 8gt
 nmap <leader>9 9gt
 
-nmap <leader>tn :tabnew<CR>
 nmap <leader>d :bd<CR>
 nmap <leader>p :bp<CR>
 nmap <leader>n :bn<CR>
