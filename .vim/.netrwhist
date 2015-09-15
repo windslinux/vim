@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/lcheng/comba/source/component/eacp'
-let g:netrw_dirhist_2='/root/.vim'
-let g:netrw_dirhist_3='/home/xdzhou/l7detect/test'
-let g:netrw_dirhist_4='/root/.vim'
+let g:netrw_dirhist_1='/home/windslinux/webtest/www/cgi/Conf'
+let g:netrw_dirhist_2='/etc/init.d'
+let g:netrw_dirhist_3='/home/windslinux/code/drupal7'
+let g:netrw_dirhist_4='/etc/apache2/sites-enabled'

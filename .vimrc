@@ -64,9 +64,6 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :qa<cr>
 
 " Fast loading .vimrc file
-nmap <leader>l :vi ~/.vimrc<cr>
-
-" Fast loading .vimrc file
 nmap <leader>s :source ~/.vimrc<cr>
 
 """
@@ -165,6 +162,11 @@ set hlsearch                        " 高亮搜索结果
 
 "Automatically remove trailing spaces when saving a file.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+" Python 文件的一般设置，比如不要 tab 等
+autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
+"pydiction
+autocmd FileType python set complete+=k~/.vim/doc/complete-dict
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket expanding
@@ -251,10 +253,10 @@ map <leader>file :FufFile<CR>
 "BufExplorer
 map <F6> :BufExplorer<cr>
 
-
 "cscope
 nmap <C-g> :cs f g <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>g :scs f g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>e :cs f e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-y> :cs f c <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>i :cs f f <C-R>=expand("<cfile>")<CR><CR>
 
@@ -265,7 +267,7 @@ let Tlist_Use_Right_Window = 1          "在右侧窗口中显示taglist窗口
 "map <silent> <F9> :TlistToggle<cr>
 
 "NERDTree
-map <silent> <F4> :NERDTreeToggle<cr>
+map <F4> :NERDTreeToggle<cr>
 let g:NERDTreeHighlightCursorline = 0
 
 let g:winManagerWindowLayout = "TagList"
@@ -297,21 +299,6 @@ set previewheight=12		" set gdb window initial height
 nmap <leader>u :MRU<CR>
 
 "cscope
-if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=0
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-        " else add database pointed to by environment
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    if filereadable("/opt/OCTEON-SDK-1.8.1/executive/cscope.out")
-        cs add /opt/OCTEON-SDK-1.8.1/executive/cscope.out
-    endif
-    set csverb
+if has("autocmd")
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
